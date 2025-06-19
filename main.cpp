@@ -77,14 +77,14 @@ int main() {
   // Declaramos los arrays
   string producto_nombre[N];
   string producto_id[N];
-  int producto_precio[N] = {0,0};
+  double producto_precio[N] = {0,0};
   int producto_stock[N] = {0,0};
   int producto_umbral[N] = {0,0};
 
   // declaramos el contador, el total del inventario y su situacion
   int i = 0;
   string situacion = "buena";
-  int total = 0;
+  double total = 0;
 
 
   // Ciclos for para leer los datos de cada array
@@ -96,8 +96,7 @@ int main() {
 
   for (i = 0; i < N; i++) {
     cout << "Ingrese el nombre del producto " << i+1 << ":" << endl;
-    cin >> producto_nombre[i];
-    cin.ignore();
+    getline(cin, producto_nombre[i]);
   }
 
   for (i = 0; i < N; i++) {
